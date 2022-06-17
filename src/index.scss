@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
+//kreiranje varijabli za boje prema grafičkim standardima
+$salmon-pink: #f76b8a;
+$turquoise: #66bfbf;
 
 html::-webkit-scrollbar {
   display: none;
@@ -12,8 +14,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #e7eaf6;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -32,8 +33,7 @@ button {
 .emailInput,
 .nameInput,
 .textarea {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.11);
-          box-shadow: rgba(0, 0, 0, 0.11);
+  box-shadow: rgba(0, 0, 0, 0.11);
   border: none;
   background: #ffffff;
   border-radius: 3rem;
@@ -44,7 +44,6 @@ button {
   padding: 0 3rem;
   font-size: 1rem;
 }
-
 @media (min-width: 1100px) {
   .input,
   .passwordInput,
@@ -63,7 +62,7 @@ button {
 
 .primaryButton {
   cursor: pointer;
-  background: #66bfbf;
+  background: $turquoise;
   border-radius: 1rem;
   padding: 0.85rem 2rem;
   color: #ffffff;
@@ -71,15 +70,9 @@ button {
   font-size: 1.25rem;
   width: 80%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .removeIcon {
@@ -88,7 +81,6 @@ button {
   top: -3%;
   right: -2%;
 }
-
 .editIcon {
   cursor: pointer;
   position: absolute;
@@ -104,7 +96,6 @@ button {
 .explore {
   margin: 1rem;
 }
-
 @media (min-width: 1024px) {
   .pageContainer,
   .offers,
@@ -124,46 +115,25 @@ button {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 5000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .loadingSpinner {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #66bfbf transparent #66bfbf transparent;
+  border-color: $turquoise transparent $turquoise transparent;
   border-radius: 50%;
-  -webkit-animation: spin 1.2s linear infinite;
-          animation: spin 1.2s linear infinite;
+  animation: spin 1.2s linear infinite;
 }
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -180,15 +150,9 @@ button {
   height: 85px;
   background-color: #ffffff;
   z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbarNav {
@@ -200,29 +164,16 @@ button {
 .navbarListItems {
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .navbarListItem {
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbarListItemName,
@@ -232,7 +183,6 @@ button {
   font-weight: 600;
   color: #8f8f8f;
 }
-
 .navbarListItemNameActive {
   color: #2c2c2c;
 }
@@ -266,7 +216,7 @@ button {
 
 .forgotPasswordLink {
   cursor: pointer;
-  color: #66bfbf;
+  color: $turquoise;
   font-weight: 600;
   text-align: right;
 }
@@ -274,15 +224,9 @@ button {
 .signInBar,
 .signUpBar {
   margin-top: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   position: inherit;
 }
 
@@ -292,13 +236,10 @@ button {
 .signUpText {
   cursor: pointer;
 }
-
 @media (min-width: 1024px) {
   .signInBar,
   .signUpBar {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    justify-content: start;
   }
 }
 
@@ -310,21 +251,14 @@ button {
 
 .signInButton,
 .signUpButton {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 3rem;
   height: 3rem;
-  background-color: #f76b8a;
+  background-color: $salmon-pink;
   border-radius: 50%;
 }
-
 @media (min-width: 1024px) {
   .signInButton,
   .signUpButton {
@@ -335,37 +269,23 @@ button {
 .socialLogin {
   margin-top: 2rem;
   margin-bottom: 6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .socialIconDiv {
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
   margin: 1rem;
   width: 3rem;
   height: 3rem;
   background-color: #ffffff;
   border-radius: 50%;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .socialIconImg {
@@ -375,7 +295,7 @@ button {
 
 .registerLink {
   margin-top: 1rem;
-  color: #f76b8a;
+  color: $salmon-pink;
   font-weight: 600;
   text-align: right;
   margin-bottom: 1rem;
@@ -386,7 +306,6 @@ button {
     margin-bottom: 10rem;
   }
 }
-
 @media (max-height: 536) {
   .explore {
     margin-bottom: 10rem;
@@ -419,8 +338,7 @@ button {
 
 .swiperSlideImg {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .swiperSlideText {
@@ -434,7 +352,6 @@ button {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 0.5rem;
 }
-
 @media (min-width: 1024px) {
   .swiperSlideText {
     font-size: 1.75rem;
@@ -452,7 +369,6 @@ button {
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
 }
-
 @media (min-width: 1024px) {
   .swiperSlidePrice {
     font-size: 1.25rem;
@@ -460,15 +376,10 @@ button {
 }
 
 .exploreCategories {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 6rem;
 }
-
 .exploreCategories a {
   width: 48%;
 }
@@ -478,8 +389,7 @@ button {
   height: 15vw;
   width: 100%;
   border-radius: 0.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin: 0 auto;
 }
 
@@ -497,15 +407,9 @@ button {
 }
 
 .categoryListing {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -518,10 +422,8 @@ button {
   width: 30%;
   height: 100px;
   border-radius: 0.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 @media (min-width: 1024px) {
   .categoryListingImg {
     width: 19%;
@@ -532,7 +434,6 @@ button {
 .categoryListingDetails {
   width: 65%;
 }
-
 @media (min-width: 1024px) {
   .categoryListingDetails {
     width: 79%;
@@ -556,23 +457,15 @@ button {
   margin-top: 0.5rem;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #66bfbf;
+  color: $turquoise;
   margin-bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .categoryListingInfoDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 275px;
 }
 
@@ -609,15 +502,9 @@ button {
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .listingName {
@@ -643,7 +530,7 @@ button {
 
 .listingType {
   padding: 0.25rem 0.5rem;
-  background-color: #66bfbf;
+  background-color: $turquoise;
   color: #ffffff;
   border-radius: 2rem;
   display: inline;
@@ -656,7 +543,6 @@ button {
   padding: 0;
   list-style-type: none;
 }
-
 .listingDetailsList li {
   margin: 0.3rem 0;
   font-weight: 500;
@@ -675,7 +561,6 @@ button {
   overflow-x: hidden;
   margin-bottom: 3rem;
 }
-
 @media (min-width: 1024px) {
   .leafletContainer {
     height: 400px;
@@ -706,12 +591,8 @@ button {
 
 .contactLandlord {
   margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .landlordName {
@@ -726,13 +607,8 @@ button {
 
 .messageDiv {
   margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 0.5rem;
 }
 
@@ -745,15 +621,9 @@ button {
 }
 
 .profileHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logOut {
@@ -762,18 +632,14 @@ button {
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
-  background-color: #f76b8a;
+  background-color: $salmon-pink;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
 }
 
 .profileDetailsHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 500px;
 }
 
@@ -784,26 +650,20 @@ button {
 .changePersonalDetails {
   cursor: pointer;
   font-weight: 600;
-  color: #f76b8a;
+  color: $salmon-pink;
 }
 
 .profileCard {
   background-color: #ffffff;
   border-radius: 1rem;
   padding: 1rem;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2);
-          box-shadow: rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.2);
   max-width: 500px;
 }
 
 .profileDetails {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .profileName,
@@ -817,7 +677,6 @@ button {
   font-weight: 600;
   width: 100%;
 }
-
 .profileNameActive {
   background-color: rgba(44, 44, 44, 0.1);
 }
@@ -828,7 +687,6 @@ button {
 .profileEmailActive {
   font-weight: 500;
 }
-
 .profileEmailActive {
   background-color: rgba(44, 44, 44, 0.1);
 }
@@ -841,20 +699,13 @@ button {
   background-color: #ffffff;
   border-radius: 1rem;
   padding: 0.25rem 1rem;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2);
-          box-shadow: rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.2);
   margin-top: 2rem;
   font-weight: 600;
   max-width: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .listingText {
@@ -873,8 +724,6 @@ button {
 }
 
 .formButtons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -891,25 +740,16 @@ button {
   border-radius: 1rem;
   font-size: 1rem;
   margin: 0.5rem 0.5rem 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .formButtonActive {
-  background-color: #66bfbf;
+  background-color: $turquoise;
   color: #ffffff;
 }
 
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -922,7 +762,6 @@ button {
   outline: none;
   font-family: "Montserrat", sans-serif;
 }
-
 .formInputSmall,
 .formInputFile {
   margin-right: 3rem;
@@ -943,12 +782,8 @@ button {
 }
 
 .formPriceDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .formPriceText {
@@ -964,9 +799,8 @@ button {
 .formInputFile {
   width: 100%;
 }
-
 .formInputFile::-webkit-file-upload-button {
-  background-color: #66bfbf;
+  background-color: $turquoise;
   border: none;
   color: #ffffff;
   font-weight: 600;
@@ -992,4 +826,3 @@ button {
   font-size: 0.8rem;
   opacity: 0.75;
 }
-/*# sourceMappingURL=index.css.map */
